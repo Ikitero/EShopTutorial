@@ -4,14 +4,16 @@ using EShop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EShop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200130120527_ShoppingCartAdded")]
+    partial class ShoppingCartAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,17 +42,17 @@ namespace EShop.Migrations
                         new
                         {
                             CategoryId = 1,
-                            CategoryName = "Fruit pies"
+                            CategoryName = "Mommy yammy"
                         },
                         new
                         {
                             CategoryId = 2,
-                            CategoryName = "Cheese cakes"
+                            CategoryName = "Foot nails"
                         },
                         new
                         {
                             CategoryId = 3,
-                            CategoryName = "Seasonal pies"
+                            CategoryName = "Something wrong"
                         });
                 });
 
@@ -257,12 +259,10 @@ namespace EShop.Migrations
                         });
                 });
 
-            modelBuilder.Entity("EShop.Models.ShoppingCartItem", b =>
+            modelBuilder.Entity("EShop.Models.ShoppingCart", b =>
                 {
-                    b.Property<int>("ShoppingCartItemId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("ShoppingCartId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Amount")
                         .HasColumnType("int");
@@ -270,10 +270,10 @@ namespace EShop.Migrations
                     b.Property<int?>("PieId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ShoppingCartId")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ShoppingCartItemId")
+                        .HasColumnType("int");
 
-                    b.HasKey("ShoppingCartItemId");
+                    b.HasKey("ShoppingCartId");
 
                     b.HasIndex("PieId");
 
@@ -289,7 +289,7 @@ namespace EShop.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("EShop.Models.ShoppingCartItem", b =>
+            modelBuilder.Entity("EShop.Models.ShoppingCart", b =>
                 {
                     b.HasOne("EShop.Models.Pie", "Pie")
                         .WithMany()
