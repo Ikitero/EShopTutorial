@@ -29,5 +29,15 @@ namespace EShop.Controllers
             pieViewModel.CurrentCategory = "Fishy squishy";
             return View(pieViewModel);
         }
+
+        public IActionResult Details (int id)
+        {
+            var pie = _pieRepository.GetPieById(id);
+            if (pie==null)
+            {
+                return NotFound();
+            }
+            return View(pie);
+        }
     }
 }
