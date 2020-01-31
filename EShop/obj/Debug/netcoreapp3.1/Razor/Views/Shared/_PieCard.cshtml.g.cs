@@ -27,7 +27,7 @@ using EShop.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bab0b5ccab9731ee2172f736b60ee0ff6fec9289", @"/Views/Shared/_PieCard.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c8397941393eb46c4bc7ea6164c555942cb69e52", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"97cfc2d4d1a47848db3c91fc73ba0c50ffe09503", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__PieCard : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Pie>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Pie", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

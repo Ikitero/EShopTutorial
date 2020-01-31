@@ -27,7 +27,7 @@ using EShop.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1422f37c0d387e3d03fca22ff7ea414575088e38", @"/Views/ShoppingCart/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c8397941393eb46c4bc7ea6164c555942cb69e52", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"97cfc2d4d1a47848db3c91fc73ba0c50ffe09503", @"/Views/_ViewImports.cshtml")]
     public class Views_ShoppingCart_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ShoppingCartViewModel>
     {
         #pragma warning disable 1998
